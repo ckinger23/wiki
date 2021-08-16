@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+  Edit
+{% endblock %}
+
+{% block body %}
+    <h1>Edit {{ entry }}</h1>
+    <form action="{% url 'saveEdit' entryKey=entry %}" method="GET">
+        <textarea name="entryData"  rows="5" cols="50"
+        value="{{ entryData }}"></textarea>
+        <input type="submit" value="Save">
+    </form>
+
+{% endblock %}

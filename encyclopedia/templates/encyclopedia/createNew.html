@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+  Create a New Page
+{% endblock %}
+
+{% block body %}
+    <h1>Create a New Page</h1>
+    <form action="{% url 'add' %}" method="GET">
+        <input class="addBar" type="text" name="entryName"
+        placeholder="Create New Page">
+        <textarea name="entryData"  rows="5" cols="50"></textarea>
+        <input type="submit" value="Save">
+    </form>
+
+{% endblock %}
